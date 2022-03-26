@@ -32,6 +32,7 @@ function App() {
         <GalleryList
           key={galleryList.id}
           galleryList={galleryList}
+          getList={getList}
         />
       </div>
       {/* <img src="" width="200" height="200"/>

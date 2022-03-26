@@ -1,6 +1,41 @@
+import axios from 'axios';
+import {useState} from 'react'
 import GalleryItem from "../GalleryItem/GalleryItem";
 
-const GalleryFunction = ({galleryList}) => {
+const GalleryList = ({galleryList, getList}) => {
+
+    const handleClick = (id) => {
+        console.log( `Clicked Me, ${id}` );
+
+        axios.put(`/gallery/like/${id}`)
+            .then( response => {
+                console.log( 'updated', response);
+                getList();
+            }).catch( err => {
+                console.log( err );
+            })        
+        
+    };
+
+    const checkLikes = ( likes, id ) => {
+        if( likes === 0 ){
+            return(
+                <>
+                    <p>No People Love This</p>
+                    <button onClick={(event) => handleClick(id)}>Love it!</button>
+                </>
+            )
+        } else {
+            return(
+                <>
+                    <p>{likes} love this picture</p>
+                    <button onClick={(event) => handleClick(id)}>Love it!</button>
+                </>
+            )
+        }
+    }
+
+
     return (
         <div className="photo">
             <p></p>
@@ -9,6 +44,7 @@ const GalleryFunction = ({galleryList}) => {
                     <GalleryItem
                         key={gallery.id}
                         gallery={gallery}
+                        checkLikes={checkLikes}
                     />
                 )
             })}
@@ -16,4 +52,4 @@ const GalleryFunction = ({galleryList}) => {
     );
 };
 
-export default GalleryFunction;
+export default GalleryList;
