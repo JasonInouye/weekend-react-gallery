@@ -28,11 +28,12 @@ function App() {
       <header className="App-header">
         <h1 className="App-title">Gallery of My Life</h1>
       </header>
-      <GalleryList
-        key={galleryList.id}
-        galleryList={galleryList}
-      />
-
+      <div className="photo-gallery">
+        <GalleryList
+          key={galleryList.id}
+          galleryList={galleryList}
+        />
+      </div>
       {/* <img src="" width="200" height="200"/>
       <img src="images/loralei2.jpg" width="200" height="200"/> */}
     </div>

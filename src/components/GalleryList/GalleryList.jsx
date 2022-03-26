@@ -1,14 +1,15 @@
+import GalleryItem from "../GalleryItem/GalleryItem";
+
 const GalleryFunction = ({galleryList}) => {
     return (
-        <div>
+        <div className="photo">
             <p></p>
             {galleryList.map( (gallery) => {
                 return (
-                <div key={gallery.id}>
-                    <img src={gallery.path} width="200" height="200"/>
-                    <p>No People Love This :(</p>
-                    <button>love it</button>
-                </div>
+                    <GalleryItem
+                        key={gallery.id}
+                        gallery={gallery}
+                    />
                 )
             })}
         </div>
