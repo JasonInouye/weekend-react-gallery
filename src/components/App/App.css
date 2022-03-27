@@ -24,3 +24,15 @@
   align-items:  flex-end;
 }
 
+.descContainer {
+  border: 2px solid black;
+  width: 375px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5px;
+}
+
+
