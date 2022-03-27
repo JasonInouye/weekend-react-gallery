@@ -13,26 +13,35 @@
   font-size: 1.5em;
 }
 
-.photo-gallery{
-  width: 90%;
-  margin: auto;
+.grid-container{
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-gap: 10px;
 }
 
-.photo-bodies{
-  display: flex;
-  justify-content: space-around;
-  align-items:  flex-end;
+
+img {
+  border: 5px solid rgb(63, 63, 63);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(97, 97, 97);
 }
 
 .descContainer {
-  border: 2px solid black;
   width: 375px;
   height: 300px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 5px;
+  border: 5px solid rgb(63, 63, 63);
+  border-radius: 10px;
+  box-shadow: 10px 10px 5px rgb(97, 97, 97);
+  font-family: 'tisa', 'arial', 'sans-serif';
+  font-weight: bold;
+  font-size: 1.5em;
 }
+
+p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 
 

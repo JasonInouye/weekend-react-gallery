@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const GalleryItem = ({ gallery, checkLikes }) => {
-    const [ descShow, setDescShow ] = useState(false)
+    const [ descShow, setDescShow ] = useState(true)
 
     const imageClick = () => {
         //console.log( `Inside of Image Click ${id}`);
@@ -9,7 +9,7 @@ const GalleryItem = ({ gallery, checkLikes }) => {
     }
 
     return (
-        <div key={gallery.id} className ="individual-photo">
+        <div key={gallery.id} className ="grid-item">
             { descShow ? <img src={gallery.path} onClick={(event) => imageClick(gallery.id)} width="375" height="300"/> : <p className="descContainer" onClick={(event) => imageClick(gallery.id)}>{gallery.description}</p> }
             {checkLikes(gallery.likes, gallery.id)}      
         </div>

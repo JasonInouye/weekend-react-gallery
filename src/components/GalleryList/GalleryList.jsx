@@ -38,8 +38,7 @@ const GalleryList = ({galleryList, getList}) => {
 
 
     return (
-        <div className="photo-bodies">
-            <p></p>
+        <>
             {galleryList.map( (gallery) => {
                 return (
                     <GalleryItem
@@ -49,7 +48,7 @@ const GalleryList = ({galleryList, getList}) => {
                     />
                 )
             })}
-        </div>
+        </>
     );
 };
 
