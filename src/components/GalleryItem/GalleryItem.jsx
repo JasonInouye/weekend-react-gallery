@@ -10,7 +10,7 @@ const GalleryItem = ({ gallery, checkLikes }) => {
 
     return (
         <div key={gallery.id} className ="grid-item">
-            { descShow ? <img src={gallery.path} onClick={(event) => imageClick(gallery.id)} width="375" height="300"/> : <p className="descContainer" onClick={(event) => imageClick(gallery.id)}>{gallery.description}</p> }
+            { descShow ? <img src={gallery.path} onClick={(event) => imageClick(gallery.id)}/> : <p className="descContainer" onClick={(event) => imageClick(gallery.id)}>{gallery.description}</p> }
             {checkLikes(gallery.likes, gallery.id)}      
         </div>
     )
