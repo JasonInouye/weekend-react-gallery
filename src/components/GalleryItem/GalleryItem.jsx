@@ -7,7 +7,6 @@ const GalleryItem = ({ gallery, checkLikes }) => {
         //console.log( `Inside of Image Click ${id}`);
         setDescShow( !descShow )
     }
-
     return (
         <div key={gallery.id} className ="grid-item">
             { descShow ? <img src={gallery.path} onClick={(event) => imageClick(gallery.id)}/> : <p className="descContainer" onClick={(event) => imageClick(gallery.id)}>{gallery.description}</p> }

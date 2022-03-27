@@ -36,7 +36,6 @@ const GalleryList = ({galleryList, getList}) => {
         }
     }
 
-
     return (
         <>
             {galleryList.map( (gallery) => {
