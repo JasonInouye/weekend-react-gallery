@@ -35,8 +35,6 @@ function App() {
           getList={getList}
         />
       </div>
-      {/* <img src="" width="200" height="200"/>
-      <img src="images/loralei2.jpg" width="200" height="200"/> */}
     </div>
   );
 };

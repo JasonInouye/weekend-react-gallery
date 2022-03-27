@@ -1,8 +1,9 @@
 import axios from 'axios';
-import {useState} from 'react'
 import GalleryItem from "../GalleryItem/GalleryItem";
 
 const GalleryList = ({galleryList, getList}) => {
+
+
 
     const handleClick = (id) => {
         console.log( `Clicked Me, ${id}` );
@@ -37,7 +38,7 @@ const GalleryList = ({galleryList, getList}) => {
 
 
     return (
-        <div className="photo">
+        <div className="photo-bodies">
             <p></p>
             {galleryList.map( (gallery) => {
                 return (
