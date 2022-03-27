@@ -23,14 +23,14 @@ const GalleryList = ({galleryList, getList}) => {
             return(
                 <>
                     <p>No People Love This</p>
-                    <button onClick={(event) => handleClick(id)}>Love it!</button>
+                    <button className="button" onClick={(event) => handleClick(id)}>Love it!</button>
                 </>
             )
         } else {
             return(
                 <>
                     <p>{likes} love this picture</p>
-                    <button onClick={(event) => handleClick(id)}>Love it!</button>
+                    <button className="button" onClick={(event) => handleClick(id)}>Love it!</button>
                 </>
             )
         }
